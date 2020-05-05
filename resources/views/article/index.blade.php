@@ -7,12 +7,11 @@
             <hr/>
             <header ><a href="{{route('articles.show',['id'=>$article->id])}}" class = "btn btn-info">
             {{ $article->title }}</a></header>
-            <div >
-                <!-- <p>{{ $article->content }}</p> -->
-                <p ><span >Author:</span> {{ $article->author->first_name }}</p>
-                <!-- <p>{{ $article->updated_at }}</p>                 -->
+            <div >                
+                <p ><span >Author:</span> {{ $article->author->first_name }}</p>                
             </div>
         </div>
         @endforeach
+        {{ $articles->links() }}
     </div>
 </body>

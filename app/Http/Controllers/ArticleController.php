@@ -16,8 +16,10 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        $articles = Article::all();
-        return view('article/index',compact('articles'));
+        
+        //$articles = Article::all(); // returns a Collection
+        $articles = Article::whereNotNull('title')->paginate(10); // Returns an array
+        return view('article/index',compact('articles'));        
     }
     public function api_index()
     {
