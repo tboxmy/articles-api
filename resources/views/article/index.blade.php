@@ -5,7 +5,8 @@
         @foreach($articles as $article)
         <div >
             <hr/>
-            <header >{{ $article->title }}</header>
+            <header ><a href="{{route('articles.show',['id'=>$article->id])}}" class = "btn btn-info">
+            {{ $article->title }}</a></header>
             <div >
                 <!-- <p>{{ $article->content }}</p> -->
                 <p ><span >Author:</span> {{ $article->author->first_name }}</p>

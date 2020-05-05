@@ -53,9 +53,16 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    // public function show(Article $article)
+    // {
+    //     //        
+    //     return view('article/show',compact('article'));
+    // }
+    public function show($id)
     {
-        //
+        //        
+        $article = Article::find($id);
+        return view('article.show',compact('article'));
     }
 
     /**
