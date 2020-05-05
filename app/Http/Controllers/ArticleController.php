@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Person;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -13,6 +14,12 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        //
+        $articles = Article::all();
+        return view('article/index',compact('articles'));
+    }
+    public function api_index()
     {
         //
         $articles = Article::all();

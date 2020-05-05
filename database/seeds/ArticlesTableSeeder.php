@@ -21,7 +21,7 @@ class ArticlesTableSeeder extends Seeder
 
             Article::create([
 
-                'author_id' => $faker->numberBetween(1, 2),
+                'person_id' => $faker->numberBetween(1, 2),
 
                 'title' => $faker->sentence,
 
